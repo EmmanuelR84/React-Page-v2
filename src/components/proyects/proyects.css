@@ -1,0 +1,11 @@
+@import url('../../bases/variables.css');
+
+.proyects__container {
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.proyects__container img {
+  width: 100%;
+}

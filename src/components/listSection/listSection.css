@@ -1,0 +1,123 @@
+@import url('../../bases/variables.css');
+
+.liSection__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(180deg, var(--white-color), var(--grey-color));
+}
+
+.liSection__content {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.liSection-img {
+  width: 40%;
+  height: 80%;
+  background-image: url('../../../public/img/landingPage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 5em;
+  margin-top: 3em;
+}
+
+.liSection-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3em 0 0 2em;
+}
+
+.liSection-title {
+  font-size: var(--lg);
+  font-weight: 600;
+  color: var(--grey-color);
+}
+
+.liSection-ul {
+  margin-top: 2em;
+}
+
+.liSection-li {
+  list-style: none;
+  font-size: var(--md);
+  font-style: italic;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 356px) and (max-width: 767px) { 
+  .liSection__container {
+    height: max-content;
+  }
+  .liSection__content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 90%;
+  }
+  .liSection-img {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    background-size: contain;
+  }
+  .liSection-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  
+  .liSection-title {
+    font-size: var(--lg);
+    font-weight: 600;
+    color: var(--grey-color);
+    margin: auto;
+  }
+  
+  .liSection-ul {
+    margin-top: .5em;
+  }
+  
+  .liSection-li {
+    list-style: none;
+    font-size: var(--md);
+    font-style: italic;
+    text-align: right;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .liSection__container {
+    height: max-content;
+  }
+  .liSection__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .liSection__content {
+    height: 700px;
+  }
+  .liSection-img {
+    margin-left: 0;
+  }
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+} */

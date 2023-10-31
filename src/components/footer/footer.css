@@ -1,0 +1,59 @@
+@import url('../../bases/variables.css');
+
+
+
+.footer__container {
+  width: 100%;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.links__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25%;
+  padding: 2em;
+}
+
+.logo {
+  width: 5em;
+  cursor: pointer;
+}
+
+.logo-text {
+  text-align: start;
+}
+
+.links-li {
+  margin-top: .25em;
+}
+
+.sMedia__container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sMedia-icon {
+  color: var(--grey-color);
+}
+
+.sMedia-icon:hover {
+  color: var(--primary-color);
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 356px) and (max-width: 767px) { 
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+  }
+  .links__container {
+    width: 100%;
+  }
+}
