@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #286dd3;
+  --primary-color: #00A99D;
   --grey-color: #504a4a;
   --black-color: #000;
   --white-color: #fff;
@@ -18,6 +18,14 @@
 
 .inactive {
   display: none;
+}
+
+/* TITULOS */
+
+.h2 {
+  font-weight: 700;
+  font-size: 2.5em;
+  color: var(--grey-color);
 }
 
 .dualColor {

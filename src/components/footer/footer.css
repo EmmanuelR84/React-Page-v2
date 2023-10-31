@@ -4,6 +4,7 @@
 
 .footer__container {
   width: 100%;
+  background-image: linear-gradient(161deg, #000000 46%, #00A99D 100%);
 }
 
 .footer__links {
@@ -26,10 +27,12 @@
 
 .logo-text {
   text-align: start;
+  color: var(--white-color);
 }
 
 .links-li {
   margin-top: .25em;
+  color: var(--white-color);
 }
 
 .sMedia__container {
@@ -39,11 +42,12 @@
 }
 
 .sMedia-icon {
-  color: var(--grey-color);
+  color: var(--white-color);
 }
 
 .sMedia-icon:hover {
   color: var(--primary-color);
+  filter: brightness(2);
 }
 
 
