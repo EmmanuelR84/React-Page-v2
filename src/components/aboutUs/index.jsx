@@ -1,14 +1,11 @@
+import Banner from '../banner';
 import './aboutUs.css';
 
 const AboutUs = ()=> {
   return <div className='about__container'>
 
   {/* PRIMER MODULO */}
-    <div className='container__presentation'>
-      <div>
-        <h1 className='title-initial info__title'>About Us</h1>
-      </div>
-    </div>
+    < Banner title={'About Us'} />
 
   {/* SEGUNDO MODULO */}
     <div className='container__info'>

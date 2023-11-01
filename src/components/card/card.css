@@ -1,0 +1,6 @@
+@import url('../../bases/variables.css');
+
+.container__card {
+  width: 250px;
+  height: 300px;
+}

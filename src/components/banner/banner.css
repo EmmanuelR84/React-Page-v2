@@ -1,0 +1,22 @@
+@import url(../../bases/variables.css);
+
+.container__banner {
+  width: 100%;
+  height: 350px;
+  padding: 3em;
+  background-image: url('../../../public/img/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* --background-overlay: '';
+  background-color: transparent; */
+  /* background-image: linear-gradient(161deg, #000000 46%, #00A99D 100%); */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  
+}
+
+.title-initial {
+  color: var(--primary-color);
+  text-shadow: 3px 3px 10px var(--black-color);
+}

@@ -1,10 +1,9 @@
 import './contact.css';
+import Banner from '../banner';
 
 const Contact = ()=> {
   return <div className='contact__container'>
-    <div>
-      <img src='/img/slide1.jpg' alt='img' />
-    </div>
+    < Banner title={'Contact Us'} />
   </div>
 }
 
