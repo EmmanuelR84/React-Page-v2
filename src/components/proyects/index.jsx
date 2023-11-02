@@ -10,7 +10,21 @@ const Proyects = () => {
     <div className='proyects__card'>
       < Card 
         img={'./img/e-commerce.jpg'}
-        title={'Proyecto'}
+        title={'Initium'}
+        info={'lorem algo y algo mas para variar'}
+        btn={'See proyect'}
+      />
+
+      < Card 
+        img={'./img/e-commerce.jpg'}
+        title={'Avogadro'}
+        info={'lorem algo y algo mas para variar'}
+        btn={'See proyect'}
+      />
+
+      < Card 
+        img={'./img/e-commerce.jpg'}
+        title={'Initium'}
         info={'lorem algo y algo mas para variar'}
         btn={'See proyect'}
       />
