@@ -1,6 +1,74 @@
 @import url('../../bases/variables.css');
 
 .container__card {
+  position: relative;
   width: 250px;
-  height: 300px;
+  max-width: 250px;
+  height: 330px;
+  margin: 0 1em;
+  border: .5px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 3px 3px 13px var(--black-color);
+  box-sizing: border-box;
+}
+
+.container__card:hover .div-info {
+  margin-top: -70px;
+  transition: 1.5s;
+  background-color: var(--primary-color);
+  opacity: .7;
+}
+
+.container__card:hover #title-card {
+  color: var(--black-color);
+  transition: 2.3s;
+}
+
+.container__card:hover .div-img {
+  transition: 2.3s;
+  filter: brightness(30%);
+}
+
+.card-img {
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+}
+
+.div-info {
+  position: absolute;
+  margin-top: 1em;
+  z-index: 1;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-info {
+  padding: .5em;
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+.div-btn {
+  position: relative;
+  background-color: var(--white-color);
+  padding: 1.5em;
+  z-index: 10;
+  bottom: -20%;
+}
+
+.card-btn {
+  width: 60%;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: all .25s;
+}
+
+.card-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  margin-top: 3px;
+  transform: scale(.95);
 }

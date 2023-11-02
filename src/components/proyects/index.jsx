@@ -12,7 +12,14 @@ const Proyects = () => {
         img={'./img/e-commerce.jpg'}
         title={'Proyecto'}
         info={'lorem algo y algo mas para variar'}
-        btn={'Ver'}
+        btn={'See proyect'}
+      />
+
+      < Card 
+        img={'./img/e-commerce.jpg'}
+        title={'Avogadro'}
+        info={'lorem algo y algo mas para variar'}
+        btn={'See proyect'}
       />
     </div>
   </div>
