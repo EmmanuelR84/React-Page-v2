@@ -1,0 +1,13 @@
+@import url('../../bases/variables.css');
+
+.btn-scrollUp {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  padding: 1em 1.3em;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}

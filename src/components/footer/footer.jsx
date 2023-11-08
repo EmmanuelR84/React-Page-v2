@@ -1,13 +1,14 @@
-import { useState } from 'react';
 import './footer.css';
 
-const Footer = ()=> {
+const Footer = (props)=> {
 
-  const [showAbout, updateShow] = useState(false);
-
-  const handleAbout = ()=> {
-    console.log('click', !showAbout);
-    updateShow(!showAbout);
+  const clickAddress = ()=> {
+    window.open('https://maps.app.goo.gl/m2SSaMXueSk76DTx6');
+    // window.open("http://www.ejemplo.com.ar/", "_self"); para abrir en la misma pestaña
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   return <div className='footer__container'>
@@ -22,17 +23,17 @@ const Footer = ()=> {
       <div className='links__container'>
         <h3 className='links-title'><span className='dualColor'>Links</span></h3>
         <ul className='ul links-ul'>
-          <li className='li links-li'><i className="fa fa-link" aria-hidden="true"></i> Home</li>
-          <li className='li links-li' onClick={handleAbout}><i class="fa fa-link" aria-hidden="true"></i> About Us</li>
-          <li className='li links-li'><i className="fa fa-link" aria-hidden="true"></i> Proyects</li>
-          <li className='li links-li'><i className="fa fa-link" aria-hidden="true"></i> Contact</li>
+          <li className='li links-li' onClick={props.showHome}><i className="fa fa-link" aria-hidden="true"></i> Home</li>
+          <li className='li links-li' onClick={props.showAbout}><i class="fa fa-link" aria-hidden="true"></i> About Us</li>
+          <li className='li links-li' onClick={props.showProyects}><i className="fa fa-link" aria-hidden="true"></i> Proyects</li>
+          <li className='li links-li' onClick={props.showContact}><i className="fa fa-link" aria-hidden="true"></i> Contact</li>
         </ul>
       </div>
   {/** contact */}
       <div className='links__container'>
       <h3 className='links-title'><span className='dualColor'>Contacto</span></h3>
         <ul className='ul'>
-          <li className='li links-li'><i className="fa fa-location-arrow" aria-hidden="true"></i> Villa María, Córdoba,Argentina</li>
+          <li className='li links-li' onClick={clickAddress}><i className="fa fa-location-arrow" aria-hidden="true"></i> Villa María, Córdoba,Argentina</li>
           <li className='li links-li'><i className="fa fa-envelope" aria-hidden="true"></i> e-mail: eramello.web@gmail.com</li>
           <li className='li links-li'><i className="fa fa-mobile" aria-hidden="true"></i> Phone: +549 353 6565823</li>
         </ul>

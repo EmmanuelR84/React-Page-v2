@@ -7,6 +7,8 @@ import AboutUs from './components/aboutUs';
 import Proyects from './components/proyects';
 import Contact from './components/contact';
 import Footer from './components/footer/footer';
+import BtnScrollUp from './components/scrollUp/index.jsx';
+
 
 function App() {
 
@@ -15,34 +17,66 @@ function App() {
   const [proyectsClick, updateProyects] = useState(false);
   const [contactClick, updateContact] = useState(false);
 
+  const [showBtnScrollUp, setBtnScrollUp] = useState(true);
+
 
   const showHome = ()=> {
-    console.log('mostrar/ocultar home');
     updateHome(true);
     updateAbout(false);
     updateProyects(false);
     updateContact(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
   const showAbout = ()=> {
-    console.log('mostrar/ocultar about');
     updateAbout(true);
     updateHome(false);
     updateProyects(false);
     updateContact(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
   const showProyects = ()=> {
-    console.log('mostrar/ocultar proyects');
     updateHome(false);
     updateAbout(false);
     updateProyects(true);
     updateContact(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
   const showContact = ()=> {
-    console.log('mostrar/ocultar contact');
     updateHome(false);
     updateAbout(false);
     updateProyects(false);
     updateContact(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  //mostrar o no el btn de scrollUp
+  window.onscroll = function() {
+    let y = window.scrollY;
+    if (y < 300) {
+      setBtnScrollUp(false);
+    } else {
+      setBtnScrollUp(true);
+    }
+  };
+
+  // subir el scroll al hacer click en btn scroll
+  const scrollUp = ()=> {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   //Ternario --> condicion ? seMuestra : noSeMuestra
@@ -55,7 +89,8 @@ function App() {
       { aboutClick === true ? < AboutUs /> : <></> }
       { proyectsClick && < Proyects /> }
       { contactClick && < Contact /> }
-      < Footer />
+      { showBtnScrollUp && < BtnScrollUp scrollUp={scrollUp} /> }
+      < Footer showHome={showHome} showAbout={showAbout} showProyects={showProyects} showContact={showContact}/>
     </div>
   );
 }

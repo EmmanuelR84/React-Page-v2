@@ -10,6 +10,8 @@
   border-radius: 10px;
   box-shadow: 3px 3px 13px var(--black-color);
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .container__card:hover .div-info {
