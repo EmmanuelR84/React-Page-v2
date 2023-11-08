@@ -57,6 +57,9 @@
   .pres__container {
     height: 46vh;
   }
+  .info__container {
+    padding: 0 1em;
+  }
   .info__title {
     color: var(--black-color);
     font-size: 3em;

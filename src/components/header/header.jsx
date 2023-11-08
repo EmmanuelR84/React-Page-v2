@@ -2,15 +2,18 @@ import './header.css';
 
 function Header(props){
 
-  console.log(props);
+  const btnMenu = () => {
+    let barMenu = document.querySelector('.navMenu');
+    barMenu.classList.toggle('responsive');
+  }
 
   return <div className='header-container'>
     <div className='header__div-logo'>
       <img src="/img/logo-White.png" alt='logo empresa' className='nav__logo' />
     </div>
     <div className='div__nav'>
-      <i aria-hidden="true" className='menu-icon fa fa-bars fa-2x'></i>
-      <nav className='responsive'>
+      <i aria-hidden="true" className='menu-icon fa fa-bars fa-2x' onClick={btnMenu}></i>
+      <nav className='responsive navMenu'>
         <ul className='nav-ul'>
           <li className='nav__link' onClick={props.showHome}>Home</li>
           <li className='nav__link' onClick={props.showAbout}>About Us</li>

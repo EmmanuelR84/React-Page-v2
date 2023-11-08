@@ -83,6 +83,20 @@
   .text-whats {
     display: none;
   }
+
+  /*nav responsive*/
+  
+  .nav-ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    margin-top: .5em;
+    font-size: 1.5em;
+    background-color: var(--grey-color);
+    padding: 2em;
+    opacity: .8;
+    z-index: 10;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -101,6 +115,20 @@
   }
   .div__nav {
     width: 30%;
+  }
+
+  /*nav responsive*/
+  
+  .nav-ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    margin-top: .5em;
+    font-size: 2em;
+    background-color: var(--grey-color);
+    padding: 2em;
+    opacity: .8;
+    z-index: 10;
   }
 }
 
