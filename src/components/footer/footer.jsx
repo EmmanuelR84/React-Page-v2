@@ -11,6 +11,10 @@ const Footer = (props)=> {
     });
   }
 
+  const clickPhone = ()=> {
+    window.open('https://wa.me/5493536565823');
+  }
+
   return <div className='footer__container'>
 
     <div className='footer__links'>
@@ -34,8 +38,8 @@ const Footer = (props)=> {
       <h3 className='links-title'><span className='dualColor'>Contacto</span></h3>
         <ul className='ul'>
           <li className='li links-li' onClick={clickAddress}><i className="fa fa-location-arrow" aria-hidden="true"></i> Villa María, Córdoba,Argentina</li>
-          <li className='li links-li'><i className="fa fa-envelope" aria-hidden="true"></i> e-mail: eramello.web@gmail.com</li>
-          <li className='li links-li'><i className="fa fa-mobile" aria-hidden="true"></i> Phone: +549 353 6565823</li>
+          <li className='li links-li' onClick={props.showContact}><i className="fa fa-envelope" aria-hidden="true"></i> e-mail: eramello.web@gmail.com</li>
+          <li className='li links-li' onClick={clickPhone}><i className="fa fa-mobile" aria-hidden="true"></i> Phone: +549 353 6565823</li>
         </ul>
       </div>
     {/** social media */}

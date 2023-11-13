@@ -7,6 +7,10 @@ function Header(props){
     barMenu.classList.toggle('responsive');
   }
 
+  const clickPhone = ()=> {
+    window.open('https://wa.me/5493536565823');
+  }
+
   return <div className='header-container'>
     <div className='header__div-logo'>
       <img src="/img/logo-White.png" alt='logo empresa' className='nav__logo' />
@@ -23,7 +27,7 @@ function Header(props){
       </nav>
     </div>
     <div className='nav__button'>
-      <button className='btn btn-success btn-mobile'><img src='/img/whatsapp.png' className='media__icon' 
+      <button className='btn btn-success btn-mobile' onClick={clickPhone}><img src='/img/whatsapp.png' className='media__icon' 
       alt='logo whatsapp'/><span className='text-whats'>Whatsapp</span></button>
     </div>
 

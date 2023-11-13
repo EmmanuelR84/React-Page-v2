@@ -17,7 +17,7 @@ function App() {
   const [proyectsClick, updateProyects] = useState(false);
   const [contactClick, updateContact] = useState(false);
 
-  const [showBtnScrollUp, setBtnScrollUp] = useState(true);
+  const [showBtnScrollUp, setBtnScrollUp] = useState(false);
 
 
   const showHome = ()=> {
@@ -29,6 +29,8 @@ function App() {
       top: 0,
       behavior: "smooth",
     });
+    let barMenu = document.querySelector('.navMenu');
+    barMenu.classList.add('responsive');
   }
   const showAbout = ()=> {
     updateAbout(true);
@@ -39,6 +41,8 @@ function App() {
       top: 0,
       behavior: "smooth",
     });
+    let barMenu = document.querySelector('.navMenu');
+    barMenu.classList.add('responsive');
   }
   const showProyects = ()=> {
     updateHome(false);
@@ -49,6 +53,8 @@ function App() {
       top: 0,
       behavior: "smooth",
     });
+    let barMenu = document.querySelector('.navMenu');
+    barMenu.classList.add('responsive');
   }
   const showContact = ()=> {
     updateHome(false);
@@ -59,6 +65,8 @@ function App() {
       top: 0,
       behavior: "smooth",
     });
+    let barMenu = document.querySelector('.navMenu');
+    barMenu.classList.add('responsive');
   }
 
   //mostrar o no el btn de scrollUp
