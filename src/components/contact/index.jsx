@@ -70,7 +70,7 @@ export default function FormPropsTextFields() {
 
       </form> */}
 
-<form name="contact" netlify>
+<form name="initiumMail" netlify>
   <p>
     <label>Name <input type="text" name="name" /></label>
   </p>
