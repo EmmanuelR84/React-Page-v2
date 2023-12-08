@@ -67,6 +67,7 @@ export default function FormPropsTextFields() {
           </Stack>
 
           <label htmlFor="name">Name<input type='text' /></label>
+          <button type='submit'>send</button>
           
 
         </div>
