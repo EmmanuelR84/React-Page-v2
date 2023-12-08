@@ -22,7 +22,7 @@ export default function FormPropsTextFields() {
         < Banner title={'Contact Us'} />
       </div>
 
-      <form name='initiumMail' netlify className='form-container'>
+      {/* <form name='initiumMail' netlify className='form-container'>
         <h1><span className='dualColor'>Send us</span> a message</h1>
         <div className='container__inputs'>
           <TextField
@@ -64,15 +64,23 @@ export default function FormPropsTextFields() {
               }}>
               Send
             </Button>
-          </Stack>
-
-          <label htmlFor="name">Name<input type='text' /></label>
-          <button type='submit'>send</button>
-          
+          </Stack>         
 
         </div>
 
-      </form>
+      </form> */}
+
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
       
     </Box>
   );
