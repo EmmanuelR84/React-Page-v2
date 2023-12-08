@@ -9,7 +9,7 @@ function Header(props){
 
   const clickPhone = ()=> {
     window.open('https://wa.me/5493536565823');
-  }
+  } 
 
   return <div className='header-container'>
     <div className='header__div-logo'>

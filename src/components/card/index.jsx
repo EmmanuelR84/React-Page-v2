@@ -5,6 +5,7 @@ const Card = (props)=> {
   let title = props.title;
   let info = props.info;
   let btn = props.btn;
+  const url = props.url;
 
   return (<div className='container__card'>
     <div className='div-img'>
@@ -15,7 +16,9 @@ const Card = (props)=> {
       <p className='card-info'>{info}</p>
     </div>
     <div className='div-btn'>
-      <button className='card-btn btn'>{btn}</button>
+      <button className='card-btn btn' onClick={function (){
+        return window.open(`${url}`);
+      }}>{btn}</button>
     </div>
   </div>)
 }

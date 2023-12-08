@@ -10,8 +10,8 @@
   border-radius: 10px;
   box-shadow: 3px 3px 13px var(--black-color);
   box-sizing: border-box;
+  -webkit-user-select:none;
   user-select: none;
-  -webkit-user-select: none;
 }
 
 .container__card:hover .div-info {
@@ -34,9 +34,11 @@
 .card-img {
   object-fit: contain;
   border-radius: 10px 10px 0 0;
+  width: 100%;
 }
 
 .div-info {
+  width: 100%;
   position: absolute;
   margin-top: 1em;
   z-index: 1;

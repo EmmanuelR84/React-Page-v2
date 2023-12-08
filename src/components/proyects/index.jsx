@@ -9,31 +9,43 @@ const Proyects = () => {
     </div>
     <div className='proyects__card'>
       < Card 
-        img={'./img/e-commerce.jpg'}
-        title={'Initium'}
-        info={'lorem algo y algo mas para variar'}
-        btn={'See proyect'}
+        img={'./img/img-erwebp.png'}
+        title={'ERWEBP'}
+        info={'Sitio web personal desarrollado con UTN'}
+        btn={'Ver proyecto'}
+        url={'https://www.erwebp.com.ar'}
       />
 
       < Card 
-        img={'./img/e-commerce.jpg'}
-        title={'Avogadro'}
-        info={'lorem algo y algo mas para variar'}
-        btn={'See proyect'}
+        img={'./img/img-aluraLatam.png'}
+        title={'Alura/Oracle'}
+        info={'Portfolio creado con el curso de Alura Latam'}
+        btn={'Ver proyecto'}
+        url={'https://emmanuelr84.github.io/challengeoneportafolio4-Portfolio/'}
       />
 
       < Card 
-        img={'./img/e-commerce.jpg'}
-        title={'Initium'}
-        info={'lorem algo y algo mas para variar'}
-        btn={'See proyect'}
+        img={'./img/img-plazoFijo.png'}
+        title={'Plazo Fijo'}
+        info={'Simulador de plazo fijo creado con html5, css3 y js'}
+        btn={'Ver proyecto'}
+        url={'https://emmanuelr84.github.io/Simulador-Plazo-Fijo/'}
       />
 
       < Card 
-        img={'./img/e-commerce.jpg'}
-        title={'Avogadro'}
-        info={'lorem algo y algo mas para variar'}
-        btn={'See proyect'}
+        img={'./img/img-ecPlatzi.png'}
+        title={'Platzi'}
+        info={'e-commerce con uno de los cursos de Platzi'}
+        btn={'Ver proyecto'}
+        url={'https://emmanuelr84.github.io/curso-frontend-developer-javascript-practico/'}
+      />
+
+      < Card 
+        img={'./img/img-cb.png'}
+        title={'C. del Barrio'}
+        info={'Sitio web del comercio de un familiar'}
+        btn={'Ver proyecto'}
+        url={'https://carniceriadelbarrio.netlify.app/'}
       />
     </div>
   </div>
