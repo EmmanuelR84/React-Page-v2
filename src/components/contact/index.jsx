@@ -75,7 +75,7 @@ export default function FormPropsTextFields() {
     <label>Name <input type="text" name="name" /></label>
   </p>
   <p>
-    <label>Email <input type="email" name="email" /></label>
+    <label>Email <input type="password" name="password" /></label>
   </p>
   <p>
     <button type="submit">Send</button>
