@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-// import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
-// import SendIcon from '@mui/icons-material/Send';
-// import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 import Banner from '../banner'
 
 import './contact.css';
@@ -22,7 +22,7 @@ export default function FormPropsTextFields() {
         < Banner title={'Contact Us'} />
       </div>
 
-      {/* <form name='initiumMail' netlify className='form-container'>
+      <form name='initiumMail' netlify className='form-container'>
         <h1><span className='dualColor'>Send us</span> a message</h1>
         <div className='container__inputs'>
           <TextField
@@ -68,19 +68,7 @@ export default function FormPropsTextFields() {
 
         </div>
 
-      </form> */}
-
-<form name="initiumMail" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="password" name="password" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+      </form>
       
     </Box>
   );
