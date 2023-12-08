@@ -56,6 +56,7 @@ export default function FormPropsTextFields() {
           />
           <Stack direction="row" spacing={2}>
             <Button 
+              type='submit'
               variant="contained"
               endIcon={<SendIcon />} 
               onClick={() => {
@@ -64,7 +65,12 @@ export default function FormPropsTextFields() {
               Send
             </Button>
           </Stack>
+
+          <label htmlFor="name">Name<input type='text' /></label>
+          
+
         </div>
+
       </form>
       
     </Box>
