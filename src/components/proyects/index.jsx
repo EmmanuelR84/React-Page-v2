@@ -47,6 +47,14 @@ const Proyects = () => {
         btn={'Ver proyecto'}
         url={'https://carniceriadelbarrio.netlify.app/'}
       />
+
+      < Card 
+        img={'./img/img-reactAlura.png'}
+        title={'React App'}
+        info={'Primer react app con Alura Latam'}
+        btn={'Ver proyecto'}
+        url={'https://first-react-app-alura.vercel.app/'}
+      />
     </div>
   </div>
 }
