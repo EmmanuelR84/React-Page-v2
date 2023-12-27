@@ -55,6 +55,14 @@ const Proyects = () => {
         btn={'Ver proyecto'}
         url={'https://first-react-app-alura.vercel.app/'}
       />
+
+      < Card 
+        img={'./img/img-reactAlura.png'}
+        title={'React Forms'}
+        info={'Formularios para imprimir'}
+        btn={'Ver proyecto'}
+        url={'https://compl-forms.vercel.app/'}
+      />
     </div>
   </div>
 }

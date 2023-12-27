@@ -68,6 +68,7 @@ export default function FormPropsTextFields() {
 
         </div>
 
+        <button type='submit'>enviar</button>
       </form>
       
     </Box>

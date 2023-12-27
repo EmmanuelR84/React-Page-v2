@@ -17,16 +17,16 @@ const AboutUs = ()=> {
         <div className='info-about'>
           <div className='info-title'>
             <h2 className='h2'><span className='dualColor'>Who</span> we are</h2>
-            <p>Insert A Meaningful Line To Evaluate The Headline.</p>
+            <p>I'm creative web front-end developer based in Córdoba, Argentina.</p>
           </div>
           <div className='info-plus'>
-            <p>Mas ande otro criollo pasa Martín Fierro ha de pasar, Nada la hace recular Ni las fantasmas lo espantan; Y dende que todos cantan Yo también quiero cantar.</p>
+            <p>With 2 year of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
           </div>
           <div className='info-plus'>
-            <p>Mas ande otro criollo pasa Martín Fierro ha de pasar, Nada la hace recular Ni las fantasmas lo espantan; Y dende que todos cantan Yo también quiero cantar.</p>
+            <p>I enjoy every step while working.</p>
           </div>
           <div className='info-plus'>
-            <p>Mas ande otro criollo pasa Martín Fierro ha de pasar, Nada la hace recular Ni las fantasmas lo espantan; Y dende que todos cantan Yo también quiero cantar.</p>
+            <p>If you need to take your project to the infinite world of cyber space, you are in the right place, contact me and I will take your project to every electronic device connected to the world network.</p>
           </div>
         </div>
         
