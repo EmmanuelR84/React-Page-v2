@@ -57,7 +57,7 @@ const Proyects = () => {
       />
 
       < Card 
-        img={'./img/img-reactAlura.png'}
+        img={'./img/forms.png'}
         title={'React Forms'}
         info={'Formularios para imprimir'}
         btn={'Ver proyecto'}

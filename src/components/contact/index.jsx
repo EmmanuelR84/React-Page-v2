@@ -22,11 +22,15 @@ export default function FormPropsTextFields() {
         < Banner title={'Contact Us'} />
       </div>
 
-      <form name='initiumMail' netlify className='form-container'>
+      <form name="contact" method="post" className='form-container'>
         <h1><span className='dualColor'>Send us</span> a message</h1>
         <div className='container__inputs'>
+          {/*el siguiente inpuet es solo para netlify*/}
+          <input type="hidden" name="form-name" value="contact" />
+
           <TextField
             required
+            name='name'
             id="standard-required"
             label="Name"
             // defaultValue="Your name"
@@ -34,6 +38,7 @@ export default function FormPropsTextFields() {
           />
           <TextField
             required
+            name='email'
             id="standard-email"
             label="email"
             // defaultValue="Your name"
@@ -42,12 +47,14 @@ export default function FormPropsTextFields() {
           />
           <TextField
             required
+            name='phone'
             id="standard-phone"
             label="phone"
             // defaultValue="Your name"
             variant="standard"
           />
           <TextField
+          name='message'
             id="standard-helperText"
             label="Your message"
             // defaultValue="Default Value"
@@ -68,7 +75,6 @@ export default function FormPropsTextFields() {
 
         </div>
 
-        <button type='submit'>enviar</button>
       </form>
       
     </Box>
