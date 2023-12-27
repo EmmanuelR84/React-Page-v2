@@ -67,7 +67,7 @@ export default function FormPropsTextFields() {
               variant="contained"
               endIcon={<SendIcon />} 
               onClick={() => {
-                alert('clicked')
+                alert('Gracias por contactarnos, a la brevedad nos pondremos en contacto!')
               }}>
               Send
             </Button>

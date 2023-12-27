@@ -1,0 +1,253 @@
+https://www.freecodecamp.org/espanol/news/como-agregar-un-formulario-netlify-a-una-aplicacion-react-creada-con-create-react-app/
+
+
+Cómo agregar un formulario Netlify a una aplicación React construida con create-react-app
+GM Fuster
+GM Fuster
+Cómo agregar un formulario Netlify a una aplicación React construida con create-react-app
+Artículo original escrito por Joseph Mawa
+Artículo original How to Add a Netlify Form to a React App Built with create-react-app
+Traducido y adaptado por Gemma Fuster
+
+Si eres un desarrollador web, en algún momento necesitarás capturar información de las personas que usan tu sitio web o aplicación.
+
+Una forma de hacerlo es utilizando formularios HTML. Pero también hay muchos frameworks que puedes usar para crear aplicaciones web muy rápidamente.
+
+Uno de estos frameworks es React. Puedes iniciar una aplicación de una sola página (SPA) muy fácilmente usando create-react-app (CRA). Después, puedes implementarla en plataformas como Netlify, Vercel, Firebase y Digital Ocean en un par de pasos.
+
+El enfoque principal de este artículo será cómo agregar la funcionalidad de formulario de Netlify a una  aplicación web React creada con create-react-app. Al final de este tutorial, podrás:
+
+Configurar una aplicación de una sola página rápidamente con create-react-app
+Añadir funcionalidad para utilizar la función de manejo de formularios incorporada de Netlify
+Implementar la aplicación en Netlify
+Configurar la función de manejo de formularios incorporada de Netlify para enviar notificaciones por correo electrónico cada vez que un cliente haya enviado un formulario
+Tanto si eres un principiante que intenta implementar su primera aplicación React como si eres un desarrollador de React experimentado, este artículo te ayudará a aprender a utilizar la funcionalidad de formulario incorporada de Netlify, sin escribir ningún código en el servidor.
+
+Si eres un desarrollador de React experimentado, puedes saltarte la introducción e ir a paso 6.  Si eres un principiante en React, puedes seguir este artículo desde el principio.
+
+Prerrequisitos
+Para seguir los pasos de este artículo, debes:
+
+Tener un conocimiento intermedio de JavaScript. Si eres un principiante, puedes seguir con el artículo y hacer preguntas en el foro de freeCodeCamp en español si no entiendes algo. También puedes copiar los ejemplos de código en cada sección y jugar con ellos en tu editor de texto para entender lo que está pasando.
+Tener al menos conocimientos básicos de la librería React.
+Tener Node instalado en tu computadora.
+Tener una cuenta de Netlify. Si no tienes una, puedes registrarte para obtener una cuenta gratis usando tu dirección de correo electrónico.
+Tener un editor de texto como VS code o Atom en tu computadora. Puedes probar los ejemplos de código a medida que avanzas. Te resultará más fácil de entender.
+Paso 1: comprueba si tienes node y npm instalados en tu computadora
+Antes de comenzar, debes verificar si tienes node (español) instalado en tu computadora.
+
+Node es un entorno de ejecución de JavaScript, y es importante tenerlo instalado para poder ejecutar el proyecto. Abre una terminal y escribe lo siguiente en el símbolo del sistema.
+
+node - v
+En lugar de lo anterior, también puedes escribir esto. Ambos hacen lo mismo.
+
+node --version
+Si Node está instalado, deberías poder ver la versión en la terminal. Tu versión puede ser diferente a la mía, pero deberías ver algo como:
+
+v15.13.0
+Si Node está instalado,  npm también está instalado porque las versiones nuevas de Node vienen con npm. Si tienes curiosidad, escribe npm --version o npm -v. Deberías poder ver la versión de npm que se ha instalado.
+
+Por otra parte, si no tienes Node instalado, puedes descargarlo e instalarlo para tu plataforma aquí (español).
+
+Paso 2: Navega hasta el directorio donde quieras crear tu proyecto
+A continuación, debes navegar al directorio donde quieras crear tu proyecto. Puedes trabajar desde el escritorio o desde cualquier directorio que elijas.
+
+A mí me gusta mantener mis proyectos en un directorio llamado proyectos en el mismo escritorio para tener un acceso más fácil. Esto es una preferencia personal.
+
+Abre la terminal y navega hasta el directorio donde deseas crear tu proyecto. Yo uso cd (change directory) en los comandos a continuación.
+
+Toma nota: Yo ya tengo un directorio proyectos en mi escritorio. Si tú no lo tienes, tendrás que ejecutar mkdir proyectos antes de hacer cd para entrar en el directorio. Como he dicho antes, puedes trabajar desde otro directorio y tus comandos serán diferentes.
+
+cd Desktop
+cd projects
+Paso 3: Cómo crear una aplicación de una sola página concreate-react-app
+Vamos a crear un proyecto de React con create-react-app. En el directorio donde quieras tener la aplicación, ejecuta lo siguiente:
+
+npx create-react-app netlify-form
+Yo he nombrado a mi proyecto netlify-form.   Tú puedes nombrarlo como desees.
+
+Si no tienes create-react-app instalado, la terminal te preguntará si lo quieres instalar. Escribe Y en el símbolo del sistema  (Y de "Yes").  Esto instalará create-react-app y luego creará un proyecto de React en el directorio netlify-form.
+
+Si ya tienes create-react-app en tu sistema, creará el proyecto de React en el directorio netlify-form. Esto tardará un par de minutos, ten paciencia.
+
+En el siguiente paso, empezarás con el servidor de desarrollo.
+
+Paso 4: Empezar con servidor de desarrollo
+En este paso, vamos a empezar con el servidor de desarrollo. Esto asegura la recarga automática cuando hacemos cambios en el proyecto durante el desarrollo, para que podamos ver cómo nuestro proyecto va tomando forma.
+
+Puedes abrir el directorio netlify-form en el editor de texto que más te guste. Cuando estés en netlify-form (o el nombre que hayas escogido), abre la terminal y ejecuta:
+
+npm run start
+El comando anterior inicia el servidor de desarrollo en el puerto 3000. Si hay otro proyecto o servicio ejecutándose en el puerto 3000, se te pedirá que inicies el servidor en otro puerto.
+
+Se abrirá una nueva pestaña del navegador en tu navegador predeterminado donde podrás ver el proyecto. Cualquier cambio que realices se reflejará automáticamente en el navegador.
+
+En el siguiente paso, crearás un componente que contendrá tu formulario.
+
+Paso 5: Crea un componente nuevo dentro del directorio src
+Ahora vas a crear un componente llamado Form dentro del directorio src. En este componente, tendrás el formulario que se procesará en tu aplicación.
+
+Crea un fichero Form.js en el directorio src y copia y pega el siguiente código:
+
+import React from "react";
+
+export default function Form() {
+  return (
+    <form name="contact" method="post">
+      <p>
+        <label htmlFor="name">Name</label> <br />
+        <input type="text" id="name" name="name" required />
+      </p>
+      <p>
+        <label htmlFor="email">Email</label> <br />
+        <input type="email" id="email" name="email" required />
+      </p>
+      <p>
+        <label htmlFor="message">Message</label> <br />
+        <textarea id="message" name="message" required></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Submit message" />
+      </p>
+    </form>
+  );
+}
+El componente anterior devuelve un simple formulario. He incluido cada par etiqueta-entrada y etiqueta-área de texto en su propia etiqueta p.
+
+La etiqueta p no tiene nada de especial. Puedes usar div si lo prefieres. He usado p  porque quiero aplicar espaciado entre los sucesivos pares etiqueta-entrada sin usar CSS.
+
+Puedes importar el componente Form y ponerlo dentro de  App. Para limpiar App.js, puedes eliminar algunos elementos que vienen con create-react-app, para que quede como esto:
+
+import "./App.css";
+import Form from "./Form";
+
+function App() {
+  return (
+    <div className="App">
+      <h1> Get in touch </h1>
+      <Form />
+    </div>
+  );
+}
+
+export default App;
+También puedes limpiar App.css para que solamente tenga el CSS:
+
+.App {
+  padding: 1em;
+}
+Cuando revises tu formulario en el navegador, debería aparecer como la siguiente imagen.
+
+Screenshot-from-2021-04-17-14-30-11
+De momento, implementar esa aplicación en Netlify no nos permitirá capturar los envíos de formularios de un cliente. Para conseguirlo, necesitamos agregar la información necesaria a nuestra aplicación, para que los bots de Netlify puedan detectar nuestro formulario.
+
+En el siguiente paso, vamos a agregar toda la información necesaria para hacer que el fichero de JSX form en React sea detectable para Netlify.
+
+Paso 6: Agregar la información necesaria para que form sea detectable para los bots de  Netlify
+En este paso, agregarás información a tu aplicación para que Netlify pueda detectar la configuración del formulario de tu aplicación. Si tu formulario se implementa en HTML sin formato, el proceso para hacerlo detectable es muy sencillo. Puedes leer sobre esto en documentación (en inglés).
+
+Pero si estás trabajando con un formulario JSX en React como en esta aplicación simple que estamos construyendo, tendrás que trabajar un poco más. Puede seguir los pasos que se describen a continuación.
+
+Agrega la versión HTML del formulario al fichero index.html
+Copia y pega los contenidos de tu fichero JSX form al fichero index.html justo después de la apertura de la etiqueta body. Esto asegurará que Netlify detecte nuestro formulario, porque los bots de compilación analizan los archivos HTML directamente en el momento de la implementación. Los bots no pueden analizar el formulario JSX.
+
+Puedes quitar los elementos label y el elemento input  submit porque añadiremos un atributo hidden a  form para que no sea visible para los usuarios y lectores de pantalla.
+
+Solamente puedes dejar los atributos type y name en los elementos  input y el atributo name en textarea para que podamos mantener el formulario al mínimo.
+
+Esto se ilustra en el código siguiente:
+
+<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+     <input type="text"  name="name">
+     <input type="email" name="email">
+     <textarea name="message"></textarea>
+</form>
+Como puedes ver en el fragmento de código anterior, tenemos los atributos adicionales netlify y netlify-honeypot en form. Los bots de Netlify los usarán mientras analizan tu HTML, así que asegúrate de agregarlos.
+
+No te olvides del atributo hidden, porque este formulario debe estar oculto a los usuarios de tu sitio web. También vale la pena señalar que los atributos "name" en el formulario HTML deben ser exactamente los mismos que los del formulario JSX correspondiente.
+
+Agrega un elemento input con "hidden" en tu JSX form
+También necesitas agregar un elemento input con "hidden" en tu JSX form con los atributos name y value como se ilustra en el siguiente código:
+
+<input type="hidden" name="form-name" value="contact" />
+El valor del atributo name siempre debe ser "form-name" y el valor del atributo value debe ser el nombre del formulario HTML, que en nuestro caso es contact.
+
+Tu fichero Form.js debe tener:
+
+import React from "react";
+
+export default function Form() {
+  return (
+    <form name="contact" method="post">
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label htmlFor="name">Name</label> <br />
+        <input type="text" id="name" name="name" required />
+      </p>
+      <p>
+        <label htmlFor="email">Email</label> <br />
+        <input type="email" id="email" name="email" required />
+      </p>
+      <p>
+        <label htmlFor="message">Message</label> <br />
+        <textarea id="message" name="message" required></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Submit message" />
+      </p>
+    </form>
+  );
+}
+Si ves la aplicación en el navegador, deberías poder ver el formulario –pero no podrás enviarlo desde tu configuración local. Solamente puedes enviar formularios después de implementar tu aplicación en Netlify.
+
+Hagámoslo ahora.
+
+Paso 7: Implementa la aplicación en Netlify
+En este paso, implementarás nuestra aplicación en Netlify para poder probar si los clientes pueden enviar formularios.
+
+Hay un par de maneras de implementar tu aplicación en Netlify. Un método es compilar la aplicación localmente e implementarla con comandos en la terminal, otro es arrastrando y soltando la compilación de producción en Netlify. El segundo método consiste en configurar la implementación automática a través de GitHub, BitBucket o GitLab.
+
+Para esta aplicación, la crearás localmente y utilizarás el método más simple de arrastrar y soltar. Este paso requiere que inicies una sesión en tu cuenta de Netlify. Si no tienes una cuenta, puedes registrarte para obtener una.
+
+Ejecuta el comando npm run build en la terminal. Esto creará la aplicación para la producción en el directorio build. Esto llevará un poco de tiempo. Deberías poder ver el directorio build cuando el comando se haya ejecutado con éxito.
+
+Inicia una sesión en tu cuenta de Netlify. En el panel de Netlify, haz clik en la opción de menú  Sites. En la parte inferior de la página, hay un área donde puedes arrastrar y soltar la compilación de producción de tu aplicación. Después de arrastrar y soltar el directorio build, comienza el proceso de construcción (build).
+
+Una vez que el sitio web se haya construido correctamente, puedes consultar el panel del proyecto para averiguar si Netlify está detectando tu formulario. Si está detectando el formulario, normalmente verás un mensaje indicándolo en la sección de formularios en la parte inferior izquierda.
+
+Lo que queda por hacer es llenar el formulario y enviarlo. Después del envío, deberías poder ver la información enviada.
+
+Screenshot-from-2021-04-17-14-03-26
+A continuación, aprenderemos cómo configurar alertas por correo electrónico para que recibas una notificación cada vez que un usuario envíe un formulario.
+
+Paso 8: Configura actualizaciones por correo electrónico cada vez que un usuario envíe un formulario
+En esta sección, configurarás tu aplicación para enviar notificaciones por correo electrónico a una dirección de correo electrónico cada vez que se envíe un formulario.
+
+Para ello, navega hasta la configuración del sitio web. A la izquierda, verás una lista de opciones del menú. Haz click en la opción forms.
+
+Bajo outgoing notifications, haz clik en Add notification y selecciona la opción  Email notification. A continuación, configurarás tus preferencias como prefieras.
+
+Screenshot-from-2021-04-17-14-11-20
+Eso es todo lo que necesitas para utilizar la funcionalidad de formulario integrada de Netlify con CRA. No necesitas código en un servidor para obtener comentarios de tus clientes.
+
+Si has logrado seguir con éxito los pasos anteriores, ¡enhorabuena! Ahora puedes seguir adelante y explorar otras funciones.
+
+Si encuentras errores o problemas relacionados con los formularios de Netlify mientras sigues este tutorial, no dudes en consultar netlify form error debugging tip (depuración de errores de formulario de netlify, en inglés).
+
+También puedes leer netlify forms documentation (inglés).
+
+Si no encuentras una solución después de utilizar los recursos anteriores, puedes preguntar en netlify forum (inglés). En esa comunidad hay muchas personas amables que podrían ayudarte.
+
+Conclusión
+En este artículo, hemos analiza:
+
+Cómo crear una aplicación React usando create-react-app
+Cómo agregar un formulario en JSX  a tu aplicación React
+Cómo agregar la información necesaria para que los bots de Netlify puedan detectar tu formulario
+Cómo implementar una compilación de producción en Netlify
+Cómo configurar notificaciones por correo electrónico cada vez que un cliente envíe un formulario
+References
+Netlify forms documentation (inglés)
+Create react app documentation (inglés)
+React documentation (español)
+Netlify form error debugging (inglés)
