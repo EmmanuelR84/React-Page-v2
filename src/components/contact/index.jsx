@@ -25,7 +25,7 @@ export default function FormPropsTextFields() {
       <form name="contact" method="post" className='form-container'>
         <h1><span className='dualColor'>Send us</span> a message</h1>
         <div className='container__inputs'>
-          {/*el siguiente inpuet es solo para netlify*/}
+          {/*el siguiente input es solo para netlify*/}
           <input type="hidden" name="form-name" value="contact" />
 
           <TextField
