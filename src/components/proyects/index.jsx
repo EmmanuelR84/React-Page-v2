@@ -13,7 +13,7 @@ const Proyects = () => {
         title={'ERWEBP'}
         info={'Sitio web personal desarrollado con UTN'}
         btn={'Ver proyecto'}
-        url={'https://www.erwebp.com.ar'}
+        url={'https://emmanuelramello.netlify.app/'}
       />
 
       < Card 
