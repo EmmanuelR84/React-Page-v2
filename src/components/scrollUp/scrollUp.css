@@ -9,7 +9,11 @@
   color: var(--white-color);
   border: none;
   border-radius: 100%;
+  outline: none;
   cursor: pointer;
+}
+.btn-scrollUp:focus {
+  outline: none;
 }
 
 

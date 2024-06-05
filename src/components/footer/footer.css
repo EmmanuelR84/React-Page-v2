@@ -50,6 +50,12 @@
   filter: brightness(2);
 }
 
+.footer__copRig {
+  color: #555;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 356px) and (max-width: 767px) { 

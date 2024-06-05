@@ -21,7 +21,7 @@ const Footer = (props)=> {
   {/** info */}
       <div className='links__container'>
         <img src='/img/Logo-BW.png' alt='logo' className='logo'/>
-        <p className='logo-text'>Inserte una linea significativa para evaluar el titulo.</p>
+        <p className='logo-text'>Building your digital presence with creativity and functionality.</p>
       </div>
   {/** menu */}
       <div className='links__container'>
@@ -55,7 +55,7 @@ const Footer = (props)=> {
 
     </div>
 
-    <div className='footer__copRig'></div>
+    <div className='footer__copRig'>Copyright &copy; Initium 2023 - All rights reserved</div>
   </div>
 }
 

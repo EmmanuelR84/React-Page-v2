@@ -7,13 +7,13 @@ function ListSection() {
       <div className="liSection-img"></div>
 
       <div className="liSection-info">
-        <h3 className="liSection-title"><span className="dualColor">A tu </span>Medida</h3>
+        <h3 className="liSection-title"><span className="dualColor">Tailored to </span>your needs</h3>
         <ul className='liSection-ul'>
-          <li className='liSection-li'>texto 1</li>
-          <li className='liSection-li'>texto 2</li>
-          <li className='liSection-li'>texto 3</li>
-          <li className='liSection-li'>texto 4</li>
-          <li className='liSection-li'>texto 5</li>
+          <li className='liSection-li'>Experience and Expertise</li>
+          <li className='liSection-li'>Customized Design</li>
+          <li className='liSection-li'>Search Engine Optimization (SEO)</li>
+          <li className='liSection-li'>Technical Support</li>
+          <li className='liSection-li'>Updates and Maintenance</li>
         </ul>
       </div>
     </div>
