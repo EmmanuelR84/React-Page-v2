@@ -93,8 +93,10 @@
     margin-top: .5em;
     font-size: 1.5em;
     background-color: var(--grey-color);
+    width: 100vw;
+    left: 0;
     padding: 2em;
-    opacity: .8;
+    opacity: .9;
     z-index: 10;
   }
 }

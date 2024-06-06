@@ -92,10 +92,9 @@
   }
   
   .liSection-li {
-    list-style: none;
     font-size: var(--md);
     font-style: italic;
-    text-align: right;
+    text-align: left;
   }
 }
 
