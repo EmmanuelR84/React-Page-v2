@@ -6,6 +6,8 @@ npm install @mui/material @mui/styled-engine-sc styled-components
 
 npm install @mui/icons-material
 
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+
 
 
 Por el momento es necesario "comment" muai stack para evitar error
