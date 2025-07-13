@@ -25,6 +25,14 @@ const Proyects = () => {
       />
 
       < Card 
+        img={'./img/tateti.png'}
+        title={'Ta-Te-Ti'}
+        info={'Juego creado con React.js'}
+        btn={'Ver proyecto'}
+        url={'https://react-tic-tac-toe-initium.netlify.app/'}
+      />
+
+      < Card 
         img={'./img/img-plazoFijo.png'}
         title={'Plazo Fijo'}
         info={'Simulador de plazo fijo creado con html5, css3 y js'}
